@@ -12,7 +12,6 @@ export default function App() {
   const [totalCount, setTotalCount] = useState(0)
   const [value, setValue] = useState("")
   const [filteredProducts, setFilteredProducts] = useState([])
-  // const [currentProducts, setCurrentProducts] = useState()
   const productsPerPage = 8
 
   useEffect(() => {
@@ -46,10 +45,11 @@ export default function App() {
       setFilteredProducts([])
       setCurrPage(1)
     }
-
   }
 
   const currentProducts = products.products ? products.products.slice(firstProductIndex, lastProductIndex) : products.products
+
+
   return (
     <div className={styles.app_container}>
       <p>Tele2 Test Task <span> by Yurtaev</span></p>
@@ -59,32 +59,18 @@ export default function App() {
         <div>
           <p>Loading...</p>
         </div> :
-        (filteredProducts.length !== 0 ?
-            (<div className={styles.main_info_block}>
-              <ProductList
-                products={filteredProducts.slice(firstProductIndex,lastProductIndex)}
-                lastProductIndex={lastProductIndex}
-                firstProductIndex={firstProductIndex}
-              />
-              <ProductPagination
-                totalProducts={filteredProducts.length}
-                productsPerPage={productsPerPage}
-                onClick={setCurrPage}
-                currPage={currPage}/>
-            </div>)
-            :
-            (<div className={styles.main_info_block}>
-              <ProductList
-                products={currentProducts}
-                lastProductIndex={lastProductIndex}
-                firstProductIndex={firstProductIndex}
-              />
-              <ProductPagination
-                totalProducts={totalCount}
-                productsPerPage={productsPerPage}
-                onClick={setCurrPage}
-                currPage={currPage}/>
-            </div>)
+        (<div className={styles.main_info_block}>
+            <ProductList
+              products={filteredProducts.length !== 0 ? filteredProducts.slice(firstProductIndex, lastProductIndex) : currentProducts}
+              lastProductIndex={lastProductIndex}
+              firstProductIndex={firstProductIndex}
+            />
+            <ProductPagination
+              totalProducts={filteredProducts.length !== 0 ? filteredProducts.length : totalCount}
+              productsPerPage={productsPerPage}
+              onClick={setCurrPage}
+              currPage={currPage}/>
+          </div>
         )
       }
     </div>
