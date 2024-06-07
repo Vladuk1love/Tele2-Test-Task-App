@@ -1,0 +1,30 @@
+.pagination_container{
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+}
+
+.pagination_container button:disabled{
+    background-color: #65A7FFff;
+    border: none;
+    padding: 10px;
+    padding-top: 8px;
+    font: 600 20px 'Montserrat';
+    border-radius: 10px;
+    color: white;
+    width: 35px;
+    cursor: pointer;
+}
+
+.pagination_container button{
+    background-color: #e9efff;
+    border: none;
+    padding: 2px;
+    font: 600 16px 'Montserrat';
+    border-radius: 10px;
+    color: black;
+    width: 35px;
+    cursor: pointer;
+}

@@ -1,0 +1,106 @@
+.search_container {
+    width: 650px;
+    height: 80px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.search_group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 400px;
+}
+
+.search_group input {
+    width: 400px;
+    height: 50px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+    font: 400 16px 'Montserrat';
+}
+
+.search_group input::placeholder {
+    color: #9e9ea7;
+}
+
+.search_group input:focus, input:hover {
+    outline: none;
+    border-color: #65A7FF66;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px #65A7FF44;
+}
+
+.search_group input::-webkit-search-cancel-button {
+    content: "x";
+    color: #ccc;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.search_group svg {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+}
+
+.search_button {
+    --color: #3880FD;
+    display: inline-block;
+    width: 85px;
+    height: 45px;
+    line-height: 2.5em;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    color: var(--color);
+    border: 2px solid #3880FD77;
+    border-radius: 10px;
+    position: relative;
+    font: 500 18px 'Montserrat';
+}
+
+.search_button::before {
+    position: absolute;
+    content: "";
+    background: var(--color);
+    width: 150px;
+    height: 200px;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.search_button:hover {
+    color: white;
+    border: 2px solid #3880FDee;
+}
+
+.search_button:before {
+    top: 100%;
+    left: 100%;
+    transition: 0.3s all;
+}
+
+.search_button:hover::before {
+    top: -30px;
+    left: -30px;
+}
+
+.search_button:last-child{
+    width: 115px;
+    font-size: 17px;
+}
+
+
