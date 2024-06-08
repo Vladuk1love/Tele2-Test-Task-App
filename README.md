@@ -10,7 +10,7 @@
 - [License](#license)
 
 ## Visual
-# [Видео-обзор тут](https://disk.yandex.ru/i/bbBFX8CuV4Do2w)
+# --> [Видео-обзор тут](https://disk.yandex.ru/i/bbBFX8CuV4Do2w) <--
 <img src="./public/img.png" width=""/>
 <img src="./public/img1.png" />
 <img src="./public/img2.png" />
