@@ -14,11 +14,15 @@ function Search(props) {
           placeholder="Поиск"
           type="search"
           className="input"
+          value={props.value}
           onChange={(e)=>{props.setValue(e.target.value)}}
         />
       </div>
       <button className={styles.search_button} onClick={() => props.setFind(true)}>Найти</button>
-      <button className={styles.search_button} onClick={() => props.setFind(false)}>Отчистить</button>
+      <button className={styles.search_button} onClick={() => {
+        props.setFind(false)
+        props.setValue('')
+      }}>Отчистить</button>
     </form>
   );
 }

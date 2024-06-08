@@ -5,12 +5,20 @@
     text-align: center;
     padding: 5px;
     background-color: #f8f8f8;
-    border-radius: 5px;
+    border-radius: 10px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+.list_item_container:hover{
+    cursor: pointer;
+    scale: 1.04;
+    transition: all 0.4s;
 }
 
 .list_item_container img{
-    width: 200px;
-    height: 200px;
+    max-width: 220px;
+    max-height: 220px;
 }
 
 .list_item_title{

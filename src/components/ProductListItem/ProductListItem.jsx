@@ -2,11 +2,12 @@ import styles from './ProductListItem.module.css'
 
 function ProductListItem(props) {
   return (
-    <div className={styles.list_item_container}>
+    <li className={styles.list_item_container} onClick={props.onClick}>
+
       <img src={props.image} alt=""/>
       <p className={styles.list_item_title}>{props.title}</p>
       <p className={styles.list_item_price}>{props.price} $</p>
-    </div>
+    </li>
   );
 }
 
